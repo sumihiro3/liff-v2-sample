@@ -58,11 +58,14 @@ export default {
     inClient: false
   }),
   created: function() {
+    console.log(`process.env.NODE_ENV: ${process.env.NODE_ENV}`)
     console.log(`process.env.VUE_APP_LIFF_ID: ${process.env.VUE_APP_LIFF_ID}`)
   },
   mounted: function() {
     this.initializeLiff()
-    this.initVConsole()
+    if (process.env.NODE_ENV != 'production') {
+      this.initVConsole()
+    }
   },
   methods: {
     initializeLiff: function () {
