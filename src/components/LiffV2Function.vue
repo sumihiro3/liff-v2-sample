@@ -125,12 +125,10 @@ export default {
     this.loggedIn = liff.isLoggedIn()
     this.inClient = liff.isInClient()
     liff
-      .getProfile()
-      .then(profile => {
+      .getProfile().then(profile => {
         this.name = profile.displayName
         this.pictureUrl = profile.pictureUrl
-      })
-      .catch(err => {
+      }).catch(err => {
         console.log(`Error at getProfile: ${err}`)
         this.name = ""
       })

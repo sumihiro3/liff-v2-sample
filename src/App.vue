@@ -21,10 +21,8 @@
           ></v-img>
         </v-flex>
         <!-- Component -->
-        <!-- <keep-alive> -->
           <LiffV2Login v-if="loggedIn === false" />
           <LiffV2Function v-else />
-        <!-- </keep-alive> -->
         <!-- Document link -->
         <v-flex mb-5 xs12>
           <h2 class="headline font-weight-bold mb-3">Status</h2>
