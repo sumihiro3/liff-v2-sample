@@ -24,7 +24,7 @@ export default {
   methods: {
     doLogin: function () {
       liff.login({
-        redirectUri: "https://liff-v2-sample.netlify.com/?hogehoge=fugafuga"
+        redirectUri: "https://liff-v2-sample.netlify.com/?hogehoge=fugafuga&bot_prompt=aggressive"
       })
     }
   }
